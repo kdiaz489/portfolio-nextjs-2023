@@ -101,6 +101,7 @@ export default function Projects({ color }) {
               </Button>
               {options.map((option) => (
                 <Button
+                  key={option.value}
                   colorScheme={selected === option.value ? `${color}` : "gray"}
                   onClick={() => handleSelected(option.value)}
                 >

@@ -44,7 +44,7 @@ export default function Contact({ color }: { color: string }) {
             <Divider orientation="horizontal" />
           </Stack>
           <Stack data-aos="fade-up"  spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
-            <Heading fontSize={"3xl"}>Let's stay in touch!</Heading>
+            <Heading fontSize={"3xl"}>Let&apos;s stay in touch!</Heading>
             <Text color={"gray.600"} fontSize={"xl"} px={4}>
               {profile.contact}
             </Text>
