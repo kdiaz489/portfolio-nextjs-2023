@@ -61,7 +61,7 @@ export default function Projects({ color }) {
                 overflow="hidden"
                 key={project.name}
               >
-                <Image objectFit="cover" src={project.image} />
+                <Image objectFit="cover" src={project.image} alt={`${project.name} image`} />
 
                 <Stack>
                   <CardBody>

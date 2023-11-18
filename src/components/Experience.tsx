@@ -62,6 +62,7 @@ export default function Experience({ color }) {
           <ButtonGroup variant="outline">
             {options.map((option) => (
               <Button
+                key={option.value}
                 colorScheme={selected === option.value ? `${color}` : "gray"}
                 onClick={() => handleSelected(option.value)}
               >
