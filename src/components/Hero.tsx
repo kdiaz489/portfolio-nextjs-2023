@@ -17,9 +17,11 @@ export default function Header({ color }: { color: string }) {
     const contactSection = document.querySelector("#contact");
     contactSection.scrollIntoView({ behavior: "smooth" });
   };
-  // const linkedin = () => {
-  //   window.open(`${profile.linkedin}`, "_blank", "noreferrer,noopener");
-  // };
+  const redirectToLinkedin = () => {
+    if(typeof window !== 'undefined'){
+      window.open(`${profile.linkedin}`, "_blank", "noreferrer,noopener");
+    }
+  };
   return (
     <>
       <Container maxW={"3xl"} >
@@ -42,7 +44,7 @@ export default function Header({ color }: { color: string }) {
             </Text>
           </Heading>
           <Text
-            color={"gray.500"}
+            color={useColorModeValue("gray.600",'white')}
             fontSize={{ base: "lg", sm: "xl", md: "2xl" }}
           >
             {profile.headerDesc}
@@ -63,17 +65,11 @@ export default function Header({ color }: { color: string }) {
                 bg: `${color}.500`,
               }}
               aria-label="lets connect button"
+              onClick={redirectToLinkedin}
             >
               Let&apos;s connect!
             </Button>
-            <Button
-              variant={"link"}
-              colorScheme={"blue"}
-              size={"sm"}
-              onClick={scrollToContact}
-            >
-              Contact Me
-            </Button>
+           
             <Box>
               <Icon
                 as={Arrow}

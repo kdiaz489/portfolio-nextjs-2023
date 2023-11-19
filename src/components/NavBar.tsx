@@ -82,7 +82,7 @@ export default function Nav({ color }) {
   return (
     <>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
+        bg={useColorModeValue("white", "#060b10")}
         px={4}
         h={16}
         boxShadow={scroll ? "base" : "none"}

@@ -18,6 +18,8 @@ import {
   Button,
   ButtonGroup,
   Center,
+  
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 // import { Fade } from "react-reveal";
@@ -40,6 +42,8 @@ export default function Experience({ color }) {
   const handleSelected = (value) => {
     setSelected(value);
   };
+
+  let cardColor = useColorModeValue('white', '#12181f')
 
   return (
     <Container maxW={"3xl"} id="experience">
@@ -75,11 +79,11 @@ export default function Experience({ color }) {
           {experience
             .filter((exp) => exp.tags.includes(selected))
             .map((exp) => (
-              <Card key={exp.company} data-aos="fade-up" size="sm">
+              <Card key={exp.company} bg={cardColor} data-aos="fade-up" size="sm">
                 <CardHeader>
                   <Flex justifyContent="space-between">
                     <HStack>
-                      <Image src={exp.image} h={50} alt="company logo" />
+                      <Image src={exp.image} h={50} w={50} bg="white" alt="company logo" />
                       <Box px={2}>
                         <Text fontWeight={600}>{exp.company}</Text>
                         <Text>{exp.position}</Text>

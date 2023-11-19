@@ -2,7 +2,7 @@
 - Karen's Website
 
 ## Header
-- Hi, my name is Karen.
+- Hi, my name is Karen!
 - I'm a software engineer.
 - Creating positive change through tech // Advocate for mindful living.
 

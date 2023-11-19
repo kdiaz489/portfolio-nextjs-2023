@@ -1,4 +1,4 @@
-import { Divider, Stack, Text, Container, Box, HStack } from "@chakra-ui/react";
+import { Divider, Stack, Text, Container, Box, HStack, useColorModeValue } from "@chakra-ui/react";
 import ProfileArray from "./ProfileArray";
 
 export default function About({ color }) {
@@ -22,7 +22,7 @@ export default function About({ color }) {
             </HStack>
             <Divider orientation="horizontal" />
           </Stack>
-          <Text data-aos="fade-up" color={"gray.500"} fontSize={"xl"} px={4}>
+          <Text data-aos="fade-up" color={useColorModeValue("gray.600", 'white')} fontSize={"xl"} px={4}>
             {profile.about}
           </Text>
         </Stack>
