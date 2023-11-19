@@ -16,11 +16,12 @@ const Home: NextPage = () => {
 
 
   const { colorMode, toggleColorMode } = useColorMode()
-  const color = colorMode === 'light' ? 'rust' : 'sage';
+  const color = 'rust' ;
   return (
     <>
     <Head>
       <title>Karen&apos;s personal website</title>
+      <link rel="icon" href="/assets/favicon.ico" sizes="any" />
     </Head>
       <Nav color={color} />
       <Header color={color} />
